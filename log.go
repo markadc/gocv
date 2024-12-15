@@ -9,23 +9,23 @@ func Now() string {
 	return currentTime
 }
 
-func GetString(s string, values ...interface{}) string {
+func HeadAddTime(s string, values ...interface{}) string {
 	return Now() + "  " + FormatString(s, values...)
 }
 
 func Info(s string, values ...interface{}) {
-	ColorPrint(GetString(s, values...), "")
+	ColorPrint(HeadAddTime(s, values...), "")
 }
 
 func Warning(s string, values ...interface{}) {
-	ColorPrint(GetString(s, values...), "yellow")
+	ColorPrint(HeadAddTime(s, values...), "yellow")
 
 }
 
 func Error(s string, values ...interface{}) {
-	ColorPrint(GetString(s, values...), "red")
+	ColorPrint(HeadAddTime(s, values...), "red")
 }
 
 func Success(s string, values ...interface{}) {
-	ColorPrint(GetString(s, values...), "green")
+	ColorPrint(HeadAddTime(s, values...), "green")
 }
