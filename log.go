@@ -10,7 +10,7 @@ func Now() string {
 }
 
 func GetString(s string, values ...interface{}) string {
-	return Now() + " | " + FormatString(s, values...)
+	return Now() + "  " + FormatString(s, values...)
 }
 
 func Info(s string, values ...interface{}) {
