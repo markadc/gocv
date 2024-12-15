@@ -5,7 +5,6 @@ import (
 	"strings"
 )
 
-// FormatString python的format，{}表示占位符
 func FormatString(template string, values ...interface{}) string {
 	for _, value := range values {
 		template = strings.Replace(template, "{}", fmt.Sprintf("%v", value), 1)
@@ -13,13 +12,11 @@ func FormatString(template string, values ...interface{}) string {
 	return template
 }
 
-// Print 输出python的format
 func Print(template string, values ...interface{}) {
 	result := FormatString(template, values...)
 	fmt.Println(result)
 }
 
-// ColorPrint 带颜色的打印
 func ColorPrint(content string, color string) {
 	colorCodes := map[string]string{
 		"black":         "30",
