@@ -12,7 +12,6 @@ func Dumps(jsonMap map[string]any) (string, error) {
 	}
 	jsonStr := string(some)
 	return jsonStr, err
-
 }
 
 func Loads(jsonStr string) (map[string]any, error) {
